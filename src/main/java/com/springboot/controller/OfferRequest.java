@@ -14,4 +14,13 @@ public class OfferRequest {
     private int offer_value;
 
     private List<String> customer_segment;
+
+    public static OfferRequest getOfferRequestObject(int restaurant_id, String offer_type, int offer_value, List<String> customer_segment) {
+        OfferRequest offerRequest = new OfferRequest();
+        offerRequest.restaurant_id = restaurant_id;
+        offerRequest.offer_type = offer_type;
+        offerRequest.offer_value = offer_value;
+        offerRequest.customer_segment = customer_segment;
+        return offerRequest;
+    }
 }
